@@ -2,6 +2,7 @@
   %head
     %title How many days?
   %body
+    = @msg if @msg
     - if @date
       %h1= "#{@days} days until #{@date}"
     %form{:action => '/', :method => :get}

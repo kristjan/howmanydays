@@ -1,0 +1,10 @@
+%html
+  %head
+    %title How many days?
+  %body
+    - if @date
+      %h1= "#{@days} days until #{@date}"
+    %form{:action => '/', :method => :get}
+      Enter a date:
+      %input{:type => :text, :name => :date, :value => @date}
+      %input{:type => :submit, :value => "How many days?"}

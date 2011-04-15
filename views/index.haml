@@ -11,4 +11,9 @@
       End date:
       %input{:type => :text, :name => :end_date, :value => @end_date}
       %br/
+      %input{:type => :checkbox, :name => :exclude_weekends,
+             :id => :exclude_weekends,
+             :checked => ('checked' if @exclude_weekends)}
+      %label{:for => :exclude_weekends} Exclude weekends
+      %br/
       %input{:type => :submit, :value => "How many days?"}

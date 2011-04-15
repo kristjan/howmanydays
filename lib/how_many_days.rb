@@ -4,6 +4,9 @@ require 'haml'
 SATURDAY = 5
 
 class HowManyDays < Sinatra::Base
+  set :root, File.join(File.dirname(__FILE__), '..')
+  set :public, File.join(root, 'public')
+
   get '/' do
     begin
       @start_date = parse_date(params[:start_date])

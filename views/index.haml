@@ -1,19 +1,25 @@
+%link{:rel => :stylesheet, :type => 'text/css', :href => 'application.css'}
 %html
   %head
     %title How many days?
   %body
-    %h1= @msg if @msg
-    %h1= "#{@days} days from #{@start_date} to #{@end_date}" if @days
-    %form{:action => '/', :method => :get}
-      Start date:
-      %input{:type => :text, :name => :start_date, :value => @start_date}
-      %br/
-      End date:
-      %input{:type => :text, :name => :end_date, :value => @end_date}
-      %br/
-      %input{:type => :checkbox, :name => :exclude_weekends,
-             :id => :exclude_weekends,
-             :checked => ('checked' if @exclude_weekends)}
-      %label{:for => :exclude_weekends} Exclude weekends
-      %br/
-      %input{:type => :submit, :value => "How many days?"}
+    #container
+      %h1= @msg if @msg
+      %h1= "#{@days} days from #{@start_date} to #{@end_date}" if @days
+      %form{:action => '/', :method => :get}
+        %label{:for => :start_date} Start date
+        %input{:type => :text, :name => :start_date, :value => @start_date}
+        %br/
+        %label{:for => :end_date} End date
+        %input{:type => :text, :name => :end_date, :value => @end_date}
+        %br/
+        %label{:for => :exclude_weekends} Exclude weekends?
+        %input{:type => :checkbox, :name => :exclude_weekends,
+               :id => :exclude_weekends,
+               :checked => ('checked' if @exclude_weekends)}
+        %br/
+        %input{:type => :submit, :value => "How many days?"}
+    %img{:src => 'cupcake.png'}
+    #footer
+      Cupcake stolen wholeheartedly from
+      %a{:href => "http://pinkiesbakerysf.com/"} Pinkie's Bakery

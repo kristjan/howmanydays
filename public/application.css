@@ -13,25 +13,15 @@ h1 {
   margin: 10px 0px;
 }
 
-img {
-  position: relative;
-  top: -134px;
-  left: 25px;
-}
-
 form input {
-  color: #666;
   font-size: 1.2em;
   margin: 5px;
   padding: 5px;
-  width: 200;
 }
 
-form label {
-  display: inline-block;
-  font-size: 1.2em;
-  text-align: right;
-  width: 200px;
+form input[type=text] {
+  color: #666;
+  width: 200;
 }
 
 form input[type=submit] {
@@ -41,7 +31,7 @@ form input[type=submit] {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 5px 0px 5px 210px;
+  margin: 25px 0px 5px 210px;
   padding: 5px;
   width: 200px;
 }
@@ -50,7 +40,14 @@ form input[type=submit]:hover {
 }
 form input[type=submit]:active {
   background-color: #EE6;
-  margin: 6px -1px 4px 211px;
+  margin: 26px -1px 4px 211px;
+}
+
+form label {
+  display: inline-block;
+  font-size: 1.2em;
+  text-align: right;
+  width: 200px;
 }
 
 #container {
@@ -65,3 +62,15 @@ form input[type=submit]:active {
   bottom: 10px;
   right: 10px;
 }
+
+#result h1 {
+  margin: 15px 0px 0px 250px;
+}
+
+#result img {
+  float: left;
+  position: relative;
+  top: -149px;
+  left: 25px;
+}
+

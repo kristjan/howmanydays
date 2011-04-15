@@ -5,7 +5,6 @@
   %body
     #container
       %h1= @msg if @msg
-      %h1= "#{@days} days from #{@start_date} to #{@end_date}" if @days
       %form{:action => '/', :method => :get}
         %label{:for => :start_date} Start date
         %input{:type => :text, :name => :start_date, :value => @start_date}
@@ -19,7 +18,9 @@
                :checked => ('checked' if @exclude_weekends)}
         %br/
         %input{:type => :submit, :value => "How many days?"}
-    %img{:src => 'cupcake.png'}
+    #result
+      %img{:src => 'cupcake.png'}
+      %h1= "#{@days} days from #{@start_date} to #{@end_date}" if @days
     #footer
       Cupcake stolen wholeheartedly from
       %a{:href => "http://pinkiesbakerysf.com/"} Pinkie's Bakery

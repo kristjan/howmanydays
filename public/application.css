@@ -24,6 +24,7 @@ form input {
   font-size: 1.2em;
   margin: 5px;
   padding: 5px;
+  width: 200;
 }
 
 form label {
@@ -34,22 +35,22 @@ form label {
 }
 
 form input[type=submit] {
-  background-color: #E3FCFF;
+  background-color: #FFB;
   border: none;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 5px 0px 5px 300px;
-  margin-left: 300px;
-  padding: 5px 10px;
+  margin: 5px 0px 5px 210px;
+  padding: 5px;
+  width: 200px;
 }
 form input[type=submit]:hover {
   background-color: #FFC;
 }
 form input[type=submit]:active {
   background-color: #FFA;
-  margin: 6px -1px 4px 301px;
+  margin: 6px -1px 4px 211px;
 }
 
 #container {
